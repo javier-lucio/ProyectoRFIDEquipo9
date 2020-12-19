@@ -1,0 +1,39 @@
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////// Código SQL base de datos /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+-- MySQL Workbench Forward Engineering
+
+SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0;
+SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0;
+SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='TRADITIONAL,ALLOW_INVALID_DATES';
+
+-- -----------------------------------------------------
+-- Schema ProyectoRFID
+-- -----------------------------------------------------
+
+-- -----------------------------------------------------
+-- Schema ProyectoRFID
+-- -----------------------------------------------------
+CREATE SCHEMA IF NOT EXISTS `ProyectoRFID` DEFAULT CHARACTER SET utf8 ;
+USE `ProyectoRFID` ;
+
+-- -----------------------------------------------------
+-- Table `ProyectoRFID`.`RFIDATA`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `ProyectoRFID`.`RFIDATA` (
+  `ID` VARCHAR(10) NOT NULL,
+  `Nombre` VARCHAR(100) NULL,
+  `Matricula` VARCHAR(20) NULL,
+  `Ocupacion` VARCHAR(120) NULL,
+  `MarcaModelo` VARCHAR(100) NULL,
+  `Color` VARCHAR(20) NULL,
+  `Placas` VARCHAR(10) NULL,
+  `FotoUsuario` LONGBLOB NULL,
+  `FotoVehiculo` LONGBLOB NULL,
+  PRIMARY KEY (`ID`))
+ENGINE = InnoDB;
+
+
+SET SQL_MODE=@OLD_SQL_MODE;
+SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
+SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
